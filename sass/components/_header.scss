@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  padding: 60px 0;
+}
+.container {
+  max-width: 450px;
+  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+.body {
+  background-color: $primary-white-color;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+}
+.no-top-pading {
+  padding-top: 0;
+}
+.logo {
+  font-family: "Raleway", sans-serif;
+  @include fonts($accent-color, 24px, 700, 1.2);
+  text-decoration: none;
+}
+
+.header {
+  height: 80px;
+  @include flex-container(flex, space-between, center);
+  flex-wrap: nowrap;
+
+  &__nav-menu {
+    @include flex(flex, center);
+    gap: 100px;
+  }
+  // &__logo {
+  //   font-family: raleway;
+  //   @include fonts($accent-color, 26px, 700, 1.2);
+  //   text-decoration: none;
+  // }
+  &__menu {
+    display: flex;
+    list-style: none;
+    gap: 80px;
+  }
+  &__page {
+    @include fonts($primary-black-color, 14px, 500, 1.4);
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    text-transform: capitalize;
+  }
+  &__contacts-menu {
+    display: flex;
+    list-style: none;
+    gap: 80px;
+  }
+  &__item {
+    @include fonts($primary-text-color, 14px, 500, 1.4);
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    align-items: center;
+    gap: 5px;
+  }
+  &__contacts-svg {
+    width: 16px;
+    margin-right: 10px;
+  }
+  &__contacts-menu :hover &__contacts-path {
+    fill: $accent-color;
+  }
+  &__page:hover,
+  &__page:focus,
+  &__item:hover,
+  &__item:focus {
+    color: $accent-color;
+  }
+  &__page:hover,
+  &__page:focus {
+    border-bottom: 4px solid $accent-color;
+    border-radius: 2px;
+    padding-bottom: 29px;
+  }
+}
+.header {
+  border-bottom: 1px solid #ececec;
+  width: 1700px;
+}
+
+@media (min-width: 1200px) {
+  container {
+    padding: 0 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .logo {
+    font-family: "Raleway", sans-serif;
+    @include fonts($accent-color, 26px, 700, 1.2);
+    text-decoration: none;
+  }
+  section {
+    padding: 94px 0;
+  }
+}

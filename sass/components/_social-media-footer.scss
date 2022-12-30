@@ -1,0 +1,39 @@
+.social-media {
+  &__set {
+    @include flex-container(flex, center, center);
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 300px;
+    @include positions(absolute, 206px, 80px, 2898px, 517px);
+    
+  }
+  &__list-icons {
+    @include size(44px, 44px);
+    display: block;
+    background: rgba(255, 255, 255, 0.1);
+    @include flex-container(flex, center, center);
+    border-radius: 25px;
+  }
+  &__list-icons:hover {
+    background-color: $accent-color;
+  }
+  &__icons {
+    fill: $primary-white-color;
+  }
+  &__paragraph {
+    @include fonts($primary-white-color, 14px, 700, 16px);
+    position: absolute;
+    top: 2886px;
+    right: 930px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+}
+.set--icons {
+  left: 517px;
+  top: 1795px;
+}
+.paragraph--two {
+  top: 1782px;
+  right: 930px;
+}

@@ -1,0 +1,56 @@
+
+.form-footer {
+  &__label {
+    @include fonts($primary-white-color, 14px, 700, 16px);
+    @include positions3(absolute, 2886px, 815px);
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 0.03em;
+    gap: 17px;
+  }
+  &__input {
+    @include size(358px, 50px);
+    background-color: $background-black;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    padding: 16px 15px;
+    position: relative;
+    outline: none;
+  }
+  &__button-form {
+    @include fonts($primary-white-color, 16px, 700, 30px);
+    background-color: $accent-color;
+    padding-right: 39px;
+    @include positions(absolute, 200px, 50px, 2919px, 1185px);
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  &__button-form:hover,
+  &__button-form:focus {
+    background-color: #188ce8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+  &__icon-message {
+    @include positions3(absolute, 2931px, 1330px);
+  }
+}
+/* portafolio */
+.label--two {
+  position: absolute;
+  left: 815px;
+  top: 1780px;
+}
+
+.button--two {
+  left: 1185px;
+  top: 1814px;
+}
+
+.icon--two {
+  position: absolute;
+  top: 1828px;
+  left: 1330px;
+}

@@ -1,0 +1,125 @@
+.main-window {
+  background: $primary-white-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  width: 528px;
+  height: 581px;
+
+  &__btn-close-modal {
+    @include flex-container(block, center, center);
+    @include size(30px, 30px);
+    @include margin(8px, 490px);
+    display: flex;
+    border-radius: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  &__btn-close-modal:hover svg path {
+    fill: $accent-color;
+    cursor: pointer;
+  }
+  &__text-form {
+    @include fonts($primary-black-color, 20px, 700, 23px);
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 15px;
+  }
+  &__label {
+    @include flex2(flex, column, left);
+    color: $primary-text-color;
+    margin-left: 41px;
+    margin-right: 39px;
+    font-size: 12px;
+    padding-bottom: 10px;
+    gap: 4px;
+  }
+  &__input {
+    @include size(448px, 40px);
+    padding-left: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: none;
+  }
+  &__input:hover,
+  &__input:focus {
+    border: 1px solid $accent-color;
+    cursor: pointer;
+  }
+  &__input-svg &__input:hover + &__svg,
+  &__input-svg &__input:focus + &__svg {
+    fill: $accent-color;
+  }
+  &__input-svg {
+    position: relative;
+  }
+  &__svg {
+    position: absolute;
+    bottom: 11px;
+    left: 15px;
+    fill: $primary-black-color;
+  }
+  &__comments-modal {
+    @include size(448px, 120px);
+    @include fonts($border-color, 12px, 400px, 14px);
+    padding: 12px 16px 12px 16px;
+    font-family: Roboto;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    resize: none;
+    outline: none;
+  }
+  &__comments-modal:hover,
+  &__comments-modal:focus {
+    border: 1px solid $accent-color;
+    cursor: pointer;
+  }
+
+  ::placeholder {
+    color: $border-color;
+  }
+  &__check-text {
+    @include fonts($primary-text-color, 14px, 400, 24px);
+    @include size(400px, 14px);
+    @include margin(10px, 47px);
+    @include flex2(flex, row, left);
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    justify-content: space-between;
+  }
+  &__custom-checkbox &__input-checkbox {
+    display: none;
+  }
+  &__custom-checkbox &__input-checkbox + &__check-text:before {
+    @include size(16px, 15px);
+    content: "";
+    border-radius: 3px;
+    background-color: white;
+    border: 1px solid #212121;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    margin-bottom: 3px;
+  }
+  &__custom-checkbox &__input-checkbox:checked + &__check-text:before {
+    background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 10 10'%3E%3Cg class='nc-icon-wrapper' stroke-width='1' fill='%23555555'%3E%3Cpath fill='none' stroke='%23FFFFFF' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' data-cap='butt' d='M2.83 4.72l1.58 1.58 2.83-2.83'/%3E%3C/g%3E%3C/svg%3E");
+    background-color: $button-primary-hover;
+    background-position: center;
+    border: none;
+    padding: 1px;
+  }
+  &__button-form {
+    @include positions(absolute, 200px, 50px, 590px, 694px);
+    @include fonts($primary-white-color, 16px, 700, 30px);
+    background-color: $accent-color;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  &__button-form:hover,
+  &__button-form:focus {
+    background-color: #188ce8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}

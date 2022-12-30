@@ -1,0 +1,30 @@
+.info {
+    font-style: normal;
+    text-decoration: none;
+  }
+.footer {
+  padding-top: 60px;
+  background-color: $background-black;
+  @include size(1600px, 252px);
+  // &__logo {
+  //   font-family: raleway;
+  //   @include fonts($accent-color, 26px, 700, 1.2);
+  //   text-decoration: none;
+  // }
+  &__information {
+    list-style: none;
+    margin-top: 6px;
+  }
+  &__direction {
+    @include fonts($primary-white-color, 14px, 400, 24px);
+    letter-spacing: 0.03em;
+  }
+  &__contact {
+    @include fonts($text-white-opacity, 14px, 400, 1.71);
+    display: block;
+    padding: 0px 0px 3px;
+  }
+  &__contact:hover {
+    color: $primary-white-color;
+  }
+}
