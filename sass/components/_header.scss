@@ -1,58 +1,23 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-section {
-  padding: 60px 0;
-}
-.container {
-  max-width: 450px;
-  margin: 0 auto;
-  margin-left: auto;
-  margin-right: auto;
-}
-.body {
-  background-color: $primary-white-color;
-  font-family: "Roboto", sans-serif;
-  font-size: 14px;
-  letter-spacing: 0.03em;
-  text-decoration: none;
-}
-.no-top-pading {
-  padding-top: 0;
-}
-.logo {
-  font-family: "Raleway", sans-serif;
-  @include fonts($accent-color, 24px, 700, 1.2);
-  text-decoration: none;
-}
-
 .header {
-  height: 80px;
   @include flex-container(flex, space-between, center);
+  border-bottom: 1px solid #ececec;
+  width: 450px;
+  height: 80px;
   flex-wrap: nowrap;
 
-  &__nav-menu {
-    @include flex(flex, center);
-    gap: 100px;
-  }
   &__menu {
-    display: flex;
-    list-style: none;
-    gap: 80px;
+    display: none;
+    gap: 50px;
   }
-  &__page {
-    @include fonts($primary-black-color, 14px, 500, 1.4);
+
+  &__link {
+    @include fonts($primary-black-color, 14px, 500, 16px);
     letter-spacing: 0.02em;
     text-decoration: none;
     text-transform: capitalize;
   }
-  &__contacts-menu {
-    display: flex;
-    list-style: none;
-    gap: 80px;
+  &__contacts {
+    display: none;
   }
   &__item {
     @include fonts($primary-text-color, 14px, 500, 1.4);
@@ -61,82 +26,67 @@ section {
     align-items: center;
     gap: 5px;
   }
-  &__contacts-svg {
+  &__svg {
     width: 16px;
     margin-right: 10px;
   }
-  &__contacts-menu :hover &__contacts-path {
+  &__contacts:hover &__path {
     fill: $accent-color;
   }
-  &__page:hover,
-  &__page:focus,
+  &__link:hover,
+  &__link:focus,
   &__item:hover,
   &__item:focus {
     color: $accent-color;
   }
-  &__page:hover,
-  &__page:focus {
+  &__link:hover,
+  &__link:focus {
     border-bottom: 4px solid $accent-color;
     border-radius: 2px;
     padding-bottom: 29px;
   }
 }
-.header {
-  border-bottom: 1px solid #ececec;
-  width: 1700px;
+@media (min-width: 768px) {
+  .header__mobile-menu {
+    display: none;
+  }
 }
 
+//   .header {
+//     @include flex-container(flex, flex-start, center);
+//     flex-wrap: nowrap;
+//     margin-left: 15px;
+//     &__logo {
+//       @include flex-container(flex, flex-start, flex-start);
+//     }
+//     &__menu {
+//       gap: 50px;
+//     }
+//     &__contacts-menu {
+//       display: flex;
+//       flex-direction: column;
+//       gap: 0px;
+//       margin-left: 80px;
+//     }
+//     &__item {
+//       @include fonts($primary-text-color, 12px, 500, 14px);
+//     }
+//     &__contacts-svg {
+//       width: 14px;
+//     }
+//   }
+//    section {
+//     padding: 60px 0;
+//   }
+// }
+
 @media (min-width: 1200px) {
-  container {
-    padding: 0 15px;
-    max-width: 1200px;
-    margin: 0 auto;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .logo {
-    font-family: "Raleway", sans-serif;
-    @include fonts($accent-color, 26px, 700, 1.2);
-    text-decoration: none;
-  }
-  section {
-    padding: 94px 0;
-  }
-}
-@media (min-width: 768px) {
-  container {
-    padding: 0 15px;
-    max-width: 768px;
-    margin: 300px;
-  }
-  .logo {
-    font-family: "Raleway", sans-serif;
-    @include fonts($accent-color, 24px, 700, 28px);
-  }
   .header {
-    @include flex-container(flex, flex-start, center);
-    flex-wrap: nowrap;
-    margin-left: 15px;
-    &__logo {
-      @include flex-container(flex, flex-start, flex-start);
-    }
     &__menu {
-      gap: 50px;
+      @include flex-container(flex, space-between);
     }
-    &__contacts-menu {
-      display: flex;
-      flex-direction: column;
-      gap: 0px;
-      margin-left: 80px;
+    &__contacts {
+      @include flex-container(flex, space-between, center);
     }
-    &__item {
-      @include fonts($primary-text-color, 12px, 500, 14px);
-    }
-    &__contacts-svg {
-      width: 14px;
-    }
-  }
-   section {
-    padding: 60px 0;
   }
 }
