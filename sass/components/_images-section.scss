@@ -1,40 +1,7 @@
-.titles {
-  @include fonts($primary-black-color, 28px, 700, 32px);
-  padding: 20px 0;
-  text-align: center;
-}
-
 .images-set {
   display: none;
 }
-// .titles {
-//   @include fonts($primary-black-color, 32px, 700, 42px);
-//   padding: 20px 0;
-//   text-align: center;
-// }
-// .images-set {
-//   &__title {
-//     margin-bottom: 30px;
-//   }
-//   &__list {
-//     @include flex-container(flex, space-between, center);
-//     flex-wrap: wrap;
-//   }
-//   &__item {
-//     list-style: none;
-//     width: 370px;
-//   }
-//   &__text-background {
-//     background: rgba(47, 48, 58, 0.8);
-//     @include fonts($primary-white-color, 14px, 700, 16px);
-//     @include size(370px, 70px);
-//     position: absolute;
-//     top: 1507px;
-//     text-align: center;
-//     letter-spacing: 0.03em;
-//     padding: 27px;
-//   }
-// }
+
 @media (min-width: 1200px) {
   .titles {
     @include fonts($primary-black-color, 32px, 700, 42px);
@@ -42,26 +9,30 @@
     text-align: center;
   }
   .images-set {
+    display: block;
+    margin-bottom: 94px;
+    
     &__title {
       margin-bottom: 30px;
     }
     &__list {
       @include flex-container(flex, space-between, center);
-      flex-wrap: wrap;
     }
     &__item {
+      position: relative;
       list-style: none;
       width: 370px;
     }
     &__text-background {
       background: rgba(47, 48, 58, 0.8);
       @include fonts($primary-white-color, 14px, 700, 16px);
-      @include size(370px, 70px);
+      @include size(369px, 70px);
       position: absolute;
-      top: 1507px;
+      bottom: 4px;
       text-align: center;
       letter-spacing: 0.03em;
       padding: 27px;
+      z-index: 3;
     }
   }
 }

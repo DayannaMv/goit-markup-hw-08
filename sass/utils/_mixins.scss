@@ -58,3 +58,8 @@
     top: $top;
     left: $left;
 }
+
+@mixin margin-auto ($left:auto, $right:auto) {
+    margin-left: $left;
+    margin-right: $right;
+}

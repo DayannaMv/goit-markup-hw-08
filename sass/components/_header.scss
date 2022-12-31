@@ -16,36 +16,58 @@
     text-decoration: none;
     text-transform: capitalize;
   }
+  &__link:hover,
+  &__link:focus {
+    color: $accent-color;
+  }
+
   &__contacts {
     display: none;
   }
   &__item {
-    @include fonts($primary-text-color, 14px, 500, 1.4);
+    @include flex-container(flex, space-between, center);
+    @include fonts($primary-text-color, 14px, 500, 16px);
     letter-spacing: 0.02em;
     text-decoration: none;
-    align-items: center;
-    gap: 5px;
-  }
-  &__svg {
-    width: 16px;
-    margin-right: 10px;
-  }
-  &__contacts:hover &__path {
-    fill: $accent-color;
-  }
-  &__link:hover,
-  &__link:focus,
-  &__item:hover,
-  &__item:focus {
-    color: $accent-color;
+    gap: 10px;
   }
   &__link:hover,
   &__link:focus {
     border-bottom: 4px solid $accent-color;
     border-radius: 2px;
-    padding-bottom: 29px;
+    padding-bottom: 19px;
+  }
+  
+  &__item:hover &__path {
+    fill: $accent-color;
+  }
+
+  &__item:hover,
+  &__item:focus {
+    color: $accent-color;
+  }
+
+  &__mobile-menu {
+    border: none;
+    background-color: inherit;
+  }
+  &__mobile-menu:hover,
+  &__mobile-menu:focus,
+  &__mobile-menu:active {
+    fill: $accent-color;
   }
 }
+
+@media (max-width: 480px) {
+  .header__logo {
+    margin-left: 2%;
+  }
+  
+  .header__mobile-menu {
+    margin-right: 2%;
+  }
+}
+
 @media (min-width: 768px) {
   .header__mobile-menu {
     display: none;
@@ -82,11 +104,17 @@
 
 @media (min-width: 1200px) {
   .header {
+    &__logo {
+      margin-right: 93px;
+    }
     &__menu {
       @include flex-container(flex, space-between);
+      margin-right: 339px;
     }
     &__contacts {
       @include flex-container(flex, space-between, center);
+      width: 205px;
+      gap: 40px;
     }
   }
 }
