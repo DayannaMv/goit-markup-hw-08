@@ -25,6 +25,13 @@
   text-decoration: none;
 }
 
+.titles {
+  @include fonts($primary-black-color, 28px, 700, 33px);
+  @include margin-auto;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
 @media (max-width:480px) {
   .container {
     max-width: 97%;
@@ -40,5 +47,10 @@
 @media (min-width: 1200px) {
   .container {
     max-width: 1200px;
+  }
+  .titles {
+    @include fonts($primary-black-color, 32px, 700, 42px);
+    padding: 20px 0;
+    text-align: center;
   }
 }

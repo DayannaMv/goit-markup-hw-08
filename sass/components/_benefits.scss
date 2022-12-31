@@ -86,6 +86,7 @@
     }
     &__list {
       @include flex-container(flex, space-between, flex-start);
+      flex-direction: row;
     }
 
     &__description {

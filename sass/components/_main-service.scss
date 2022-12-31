@@ -65,9 +65,11 @@
     &__title {
       @include fonts($primary-white-color, 44px, 900, 1.3);
       width: 696px;
+      padding-top: 200px
     }
     &__button-primary {
       @include fonts($primary-white-color, 16px, 700, 30px);
+      margin-bottom: 200px;
     }
   }
 }

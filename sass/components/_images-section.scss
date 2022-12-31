@@ -3,11 +3,7 @@
 }
 
 @media (min-width: 1200px) {
-  .titles {
-    @include fonts($primary-black-color, 32px, 700, 42px);
-    padding: 20px 0;
-    text-align: center;
-  }
+  
   .images-set {
     display: block;
     margin-bottom: 94px;
