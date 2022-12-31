@@ -118,6 +118,53 @@ section {
     padding: 94px 0;
   }
 }
+@media (min-width: 768px) {
+  container {
+    padding: 0 15px;
+    max-width: 768px;
+    margin: 300px;
+  }
+  .logo {
+    font-family: "Raleway", sans-serif;
+    color: #2196f3;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+  }
+  .header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-left: 15px;
+  }
+  .header__logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .header__menu {
+    gap: 50px;
+  }
+  .header__contacts-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    margin-left: 80px;
+  }
+  .header__item {
+    color: #757575;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14px;
+  }
+  .header__contacts-svg {
+    width: 14px;
+  }
+  section {
+    padding: 60px 0;
+  }
+}
 .main-service {
   background-color: #212121;
   padding: 200px var(--container-padding);
@@ -210,6 +257,34 @@ section {
     height: 50px;
     top: 430px;
     left: 666px;
+  }
+}
+@media (min-width: 768px) {
+  .main-service {
+    width: 768px;
+    height: 400px;
+  }
+  .main-service__title {
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 42px;
+    position: absolute;
+    width: 360px;
+    height: 84px;
+    top: 198px;
+    left: 204px;
+  }
+  .main-service__button-primary {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 30px;
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    top: 312px;
+    left: 284px;
   }
 }
 .main-window {
@@ -410,7 +485,7 @@ section {
 
 @media (min-width: 1200px) {
   .benefits__vector {
-    width: 450px;
+    width: 270px;
     height: 120px;
     margin-bottom: 30px;
   }
@@ -428,6 +503,34 @@ section {
     font-weight: 400;
     line-height: 24px;
     width: 270px;
+    height: 75px;
+  }
+}
+@media (min-width: 768px) {
+  .benefits__vector {
+    width: 354px;
+    height: 120px;
+    margin-bottom: 30px;
+  }
+  .benefits__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 10px;
+  }
+  .benefits__title {
+    height: 30px;
+    margin-left: 0px;
+    text-align: start;
+  }
+  .benefits__description {
+    color: #757575;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    width: 354px;
     height: 75px;
   }
 }
@@ -560,6 +663,26 @@ section {
     margin-left: 20px;
   }
 }
+@media (min-width: 768px) {
+  .team-section__cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .team-section__card {
+    width: 354px;
+    height: 536px;
+  }
+  .team-section__img {
+    width: 354px;
+    height: 374px;
+  }
+  .team-section__team-list {
+    margin-left: 80px;
+  }
+}
 .customer-section {
   padding-top: 0px;
   padding-bottom: 0px;
@@ -631,14 +754,24 @@ section {
 }
 
 .footer {
-  padding-top: 60px;
+  padding-top: 55px;
   background-color: #2f303a;
-  width: 1600px;
-  height: 252px;
+  width: 480px;
+  height: 603px;
+}
+.footer__logotype {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .footer__information {
   list-style: none;
-  margin-top: 6px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
 }
 .footer__direction {
   color: #ffffff;
@@ -659,6 +792,26 @@ section {
   color: #ffffff;
 }
 
+@media (min-width: 1200x) {
+  .footer {
+    padding-top: 60px;
+    width: 1600px;
+    height: 252px;
+  }
+  .footer__logotype {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .footer__information {
+    margin-top: 6px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: start;
+  }
+}
 .social-media__set {
   display: flex;
   justify-content: center;
@@ -669,8 +822,8 @@ section {
   position: absolute;
   width: 206px;
   height: 80px;
-  top: 2898px;
-  left: 517px;
+  top: 5309px;
+  left: 137px;
 }
 .social-media__list-icons {
   width: 44px;
@@ -694,8 +847,8 @@ section {
   font-weight: 700;
   line-height: 16px;
   position: absolute;
-  top: 2886px;
-  right: 930px;
+  top: 5290px;
+  right: 173px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
@@ -710,21 +863,45 @@ section {
   right: 930px;
 }
 
+@media (min-width: 1200x) {
+  .social-media__set {
+    position: absolute;
+    width: 206px;
+    height: 80px;
+    top: 2898px;
+    left: 517px;
+  }
+  .social-media__paragraph {
+    position: absolute;
+    top: 2886px;
+    right: 930px;
+  }
+  .set--icons {
+    left: 517px;
+    top: 1795px;
+  }
+  .paragraph--two {
+    top: 1782px;
+    right: 930px;
+  }
+}
 .form-footer__label {
   color: #ffffff;
   font-size: 14px;
   font-weight: 700;
   line-height: 16px;
   position: absolute;
-  top: 2886px;
-  left: 815px;
+  top: 5430px;
+  left: 15px;
   display: flex;
+  text-align: center;
   flex-direction: column;
   letter-spacing: 0.03em;
+  text-transform: uppercase;
   gap: 17px;
 }
 .form-footer__input {
-  width: 358px;
+  width: 450px;
   height: 50px;
   background-color: #2f303a;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -744,8 +921,8 @@ section {
   position: absolute;
   width: 200px;
   height: 50px;
-  top: 2919px;
-  left: 1185px;
+  top: 5535px;
+  left: 140px;
   border: none;
   outline: none;
   border-radius: 4px;
@@ -757,8 +934,8 @@ section {
 }
 .form-footer__icon-message {
   position: absolute;
-  top: 2931px;
-  left: 1330px;
+  top: 5548px;
+  left: 290px;
 }
 
 /* portafolio */
@@ -779,6 +956,31 @@ section {
   left: 1330px;
 }
 
+@media (min-width: 1200x) {
+  .form-footer__label {
+    position: absolute;
+    top: 2886px;
+    left: 815px;
+    text-transform: capitalize;
+  }
+  .form-footer__input {
+    width: 358px;
+    height: 50px;
+  }
+  .form-footer__button-form {
+    padding-right: 39px;
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    top: 2919px;
+    left: 1185px;
+  }
+  .form-footer__icon-message {
+    position: absolute;
+    top: 2931px;
+    left: 1330px;
+  }
+}
 .buttons__item {
   color: #212121;
   font-size: 16px;

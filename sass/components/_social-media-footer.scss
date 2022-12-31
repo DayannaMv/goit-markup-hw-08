@@ -4,8 +4,7 @@
     flex-wrap: wrap;
     gap: 10px;
     width: 300px;
-    @include positions(absolute, 206px, 80px, 2898px, 517px);
-    
+    @include positions(absolute, 206px, 80px, 5309px, 137px);
   }
   &__list-icons {
     @include size(44px, 44px);
@@ -23,8 +22,8 @@
   &__paragraph {
     @include fonts($primary-white-color, 14px, 700, 16px);
     position: absolute;
-    top: 2886px;
-    right: 930px;
+    top: 5290px;
+    right: 173px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
   }
@@ -36,4 +35,24 @@
 .paragraph--two {
   top: 1782px;
   right: 930px;
+}
+@media (min-width: 1200x) {
+  .social-media {
+    &__set {
+      @include positions(absolute, 206px, 80px, 2898px, 517px);
+    }
+    &__paragraph {
+      position: absolute;
+      top: 2886px;
+      right: 930px;
+    }
+  }
+  .set--icons {
+    left: 517px;
+    top: 1795px;
+  }
+  .paragraph--two {
+    top: 1782px;
+    right: 930px;
+  }
 }

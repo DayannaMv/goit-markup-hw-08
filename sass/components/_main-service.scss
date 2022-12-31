@@ -56,5 +56,17 @@
       @include positions(absolute, 200px, 50px, 430px, 666px);
     }
   }
-  
+}
+@media (min-width: 768px) {
+  .main-service {
+    @include size(768px, 400px);
+    &__title {
+      @include fonts($primary-white-color, 26px, 900, 42px);
+      @include positions(absolute, 360px, 84px, 198px, 204px);
+    }
+    &__button-primary {
+      @include fonts($primary-white-color, 16px, 700, 30px);
+      @include positions(absolute, 200px, 50px, 312px, 284px);
+    }
+  }
 }

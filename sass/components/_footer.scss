@@ -3,17 +3,19 @@
     text-decoration: none;
   }
 .footer {
-  padding-top: 60px;
+  padding-top: 55px;
   background-color: $background-black;
-  @include size(1600px, 252px);
-  // &__logo {
-  //   font-family: raleway;
-  //   @include fonts($accent-color, 26px, 700, 1.2);
-  //   text-decoration: none;
-  // }
+  @include size(480px, 603px);
+  &__logotype {
+    @include flex-container(flex, center, center);
+  }
+ 
   &__information {
     list-style: none;
-    margin-top: 6px;
+    margin-top: 15px;
+    @include flex-container(flex, center, center);
+    flex-direction: column;
+    text-align: center;
   }
   &__direction {
     @include fonts($primary-white-color, 14px, 400, 24px);
@@ -26,5 +28,20 @@
   }
   &__contact:hover {
     color: $primary-white-color;
+  }
+}
+@media (min-width: 1200x) {
+  .footer {
+    padding-top: 60px;
+    @include size(1600px, 252px);
+    &__logotype {
+      @include flex-container(flex, flex-start, flex-start);
+    }
+    &__information {
+      margin-top: 6px;
+      @include flex-container(flex, flex-start, flex-start);
+      flex-direction: column;
+      text-align:start;
+    }
   }
 }

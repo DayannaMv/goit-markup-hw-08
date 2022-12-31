@@ -71,3 +71,21 @@
     }
   }
 }
+@media (min-width: 768px) {
+  .team-section {
+     &__cards {
+    @include flex-container(flex, space-between, flex-end);
+    flex-wrap: wrap;
+    flex-direction: row
+  }
+    &__card {
+      @include size(354px, 536px);
+    }
+    &__img {
+      @include size(354px, 374px);
+    }
+    &__team-list {
+      margin-left: 80px;
+    }
+  }
+}

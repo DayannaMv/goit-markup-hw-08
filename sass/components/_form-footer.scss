@@ -1,15 +1,16 @@
-
 .form-footer {
   &__label {
     @include fonts($primary-white-color, 14px, 700, 16px);
-    @include positions3(absolute, 2886px, 815px);
+    @include positions3(absolute, 5430px, 15px);
     display: flex;
+    text-align: center;
     flex-direction: column;
     letter-spacing: 0.03em;
+    text-transform: uppercase;
     gap: 17px;
   }
   &__input {
-    @include size(358px, 50px);
+    @include size(450px, 50px);
     background-color: $background-black;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -22,7 +23,7 @@
     @include fonts($primary-white-color, 16px, 700, 30px);
     background-color: $accent-color;
     padding-right: 39px;
-    @include positions(absolute, 200px, 50px, 2919px, 1185px);
+    @include positions(absolute, 200px, 50px, 5535px, 140px);
     border: none;
     outline: none;
     border-radius: 4px;
@@ -34,7 +35,7 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   }
   &__icon-message {
-    @include positions3(absolute, 2931px, 1330px);
+    @include positions3(absolute, 5548px, 290px);
   }
 }
 /* portafolio */
@@ -53,4 +54,23 @@
   position: absolute;
   top: 1828px;
   left: 1330px;
+}
+@media (min-width: 1200x) {
+  .form-footer {
+    &__label {
+      @include positions3(absolute, 2886px, 815px);
+      text-transform: capitalize
+    }
+    &__input {
+      @include size(358px, 50px);
+    }
+    &__button-form {
+      padding-right: 39px;
+      @include positions(absolute, 200px, 50px, 2919px, 1185px);
+    }
+    &__icon-message {
+      @include positions3(absolute, 2931px, 1330px);
+    }
+  }
+  
 }
