@@ -74,33 +74,6 @@
   }
 }
 
-//   .header {
-//     @include flex-container(flex, flex-start, center);
-//     flex-wrap: nowrap;
-//     margin-left: 15px;
-//     &__logo {
-//       @include flex-container(flex, flex-start, flex-start);
-//     }
-//     &__menu {
-//       gap: 50px;
-//     }
-//     &__contacts-menu {
-//       display: flex;
-//       flex-direction: column;
-//       gap: 0px;
-//       margin-left: 80px;
-//     }
-//     &__item {
-//       @include fonts($primary-text-color, 12px, 500, 14px);
-//     }
-//     &__contacts-svg {
-//       width: 14px;
-//     }
-//   }
-//    section {
-//     padding: 60px 0;
-//   }
-// }
 
 @media (min-width: 1200px) {
   .header {

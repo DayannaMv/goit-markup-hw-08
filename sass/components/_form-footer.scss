@@ -1,14 +1,14 @@
 .form-footer {
-  &__label {
-    @include fonts($primary-white-color, 14px, 700, 16px);
-    @include positions3(absolute, 5430px, 15px);
-    display: flex;
-    text-align: center;
+  @include flex-container(flex, flex-start, center);
+  flex-direction: column;
+  gap: 20px;
+
+  &__flex {
+    @include flex-container(flex, flex-start, center);
     flex-direction: column;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    gap: 17px;
+    gap: 20px;
   }
+
   &__input {
     @include size(450px, 50px);
     background-color: $background-black;
@@ -16,46 +16,27 @@
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     padding: 16px 15px;
-    position: relative;
     outline: none;
   }
-  &__button-form {
+  &__button {
     @include fonts($primary-white-color, 16px, 700, 30px);
+    @include flex-container(flex, center, center);
+    @include size(200px, 50px);
+    gap: 25px;
     background-color: $accent-color;
-    padding-right: 39px;
-    @include positions(absolute, 200px, 50px, 5535px, 140px);
     border: none;
     outline: none;
     border-radius: 4px;
     cursor: pointer;
   }
-  &__button-form:hover,
-  &__button-form:focus {
+  &__button:hover,
+  &__button:focus {
     background-color: #188ce8;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   }
-  &__icon-message {
-    @include positions3(absolute, 5548px, 290px);
-  }
-}
-/* portafolio */
-.label--two {
-  position: absolute;
-  left: 815px;
-  top: 1780px;
 }
 
-.button--two {
-  left: 1185px;
-  top: 1814px;
-}
-
-.icon--two {
-  position: absolute;
-  top: 1828px;
-  left: 1330px;
-}
-@media (min-width: 1200x) {
+@media (min-width: 1200px) {
   .form-footer {
     &__label {
       @include positions3(absolute, 2886px, 815px);

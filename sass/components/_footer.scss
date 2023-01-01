@@ -2,19 +2,36 @@
     font-style: normal;
     text-decoration: none;
   }
+
+  .paragraph {
+    @include fonts($primary-white-color, 14px, 700, 16px);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
 .footer {
-  padding-top: 55px;
+  padding-top: 60px;
   background-color: $background-black;
-  @include size(480px, 603px);
-  &__logotype {
+  height: 604px;
+
+  &__container {
+    @include flex-container(flex, space-between, center);
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  &__address {
     @include flex-container(flex, center, center);
+    flex-direction: column;
+  }
+
+  &__logotype {
+    font-style: normal;
   }
  
   &__information {
     list-style: none;
     margin-top: 15px;
-    @include flex-container(flex, center, center);
-    flex-direction: column;
     text-align: center;
   }
   &__direction {
@@ -27,7 +44,7 @@
     padding: 0px 0px 3px;
   }
   &__contact:hover {
-    color: $primary-white-color;
+    color: $accent-color;
   }
 }
 @media (min-width: 1200x) {
